@@ -40,4 +40,5 @@ We closely followed the work of Dominick Sovana Hing and Connor Joseph Settle fr
 5. Demo
    Short demo for a quick overview of model outputs. Input a path to a song and model should output a list of 1s and 0s representing included/excluded instruments. 
 
-Note: Classifiers are saved separately in: classifier.py. Helper functions regarding training, validation, parameter-tuning and testing are saved in classifier_util.py
+Note: Classifiers are saved separately in: classifier.py. Helper functions regarding training, validation, parameter-tuning and testing are saved in classifier_util.py. Required libraries and versions can be found in requirements.txt.
+
