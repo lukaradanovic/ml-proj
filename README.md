@@ -9,6 +9,7 @@ Keywords: multilabel classifier, musical instrument, audio,  transfer learning, 
 Link to .wav dataset: https://www.upf.edu/web/mtg/irmas
 Dataset is already split into training and testing. We further performed a 90-10 split of the training set to obtain the validation set. 
 Raw training, validation and test set contain .wav files that we later transform to images. Regarding labels, training and validation instances are labeled by a single instrument which is included in the file name. Test set instances can be labeled by more than one instrument and their labels are saved in the corresponding .txt files.
+The original training set (training + validation) consists of 6705 3-second audio files, while the test set consists of 2800 stereo .wav files, each of which is between 5 and 20 seconds.
 
 Machine learning library: pytorch 
 
