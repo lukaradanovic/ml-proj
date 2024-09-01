@@ -22,25 +22,29 @@ that determine which musical instruments are present in audio files. There are 1
 We closely followed the work of Dominick Sovana Hing and Connor Joseph Settle from Stanford Univerity linked above consisting of following steps:
 
 1. Preprocessing
+   
    1. Data Augmentation - splitting original files into 3-seconds segments and doubling the number of files by channel swapping
    2. Audio to Image - extracting melspectograms from audio files with librosa
    Note: We used utils.py, irmasTestUtils.py, irmasTrainUtils.py for steps 1.1 and 1.2 provided by fellows from Stanford. :)
    
    Notebook: 01_DataPreprocessing.ipynb
 
-2. Single Label Classifier
+3. Single Label Classifier
+   
    Implementation of a base CNN described in the original paper. We performed manual parameter tuning which resulted in obtaining a slightly different model that is later    
    used for transfer learning. Resulting model has slightly worse accuracy but yields better results in overfitting analysis. 
 
    Notebook: 02_SingleLabelClassifier.ipynb (and library classifier.py)
    
 4. Multilabel Classifier
+   
    We added 3 dense layers to the single label model and used pre-trained weights from single classifier to obtain the final multilabel model. We tuned parameters on   
    validation set. Finally, we performed testing on the test set to obtain the relevant metrics.
 
    Notebook: 03_MultilabelClassifier.ipynb (and library classifier.py)
 
 6. Demo
+   
    Short demo for a quick overview of model outputs. Input a path to a song and model should output a list of 1s and 0s representing included/excluded instruments.
 
    Notebook: 04_Demo.ipynb
